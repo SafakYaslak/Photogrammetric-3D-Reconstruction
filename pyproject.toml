@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scene-reconstruction-tools"
+version = "0.1.0"
+description = "Desktop utilities for COLMAP frame extraction and 3D reconstruction review."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "open3d>=0.18.0",
+    "Pillow>=10.0.0",
+    "mss>=9.0.0",
+    "opencv-python>=4.8.0",
+]
+
+[project.scripts]
+extract-colmap-frames = "scene_tools.colmap_frames:main"
+four-camera-viewer = "scene_tools.camera_viewer.app:main"
+ply-studio = "scene_tools.ply_viewer.app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scene_tools*"]
+exclude = ["tests*"]

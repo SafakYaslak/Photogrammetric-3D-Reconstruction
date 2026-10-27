@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and build output
+.venv/
+venv/
+build/
+dist/
+
+# Local reconstruction data and generated recordings
+/camera_images/
+/recordings/
+/gala/
+*.ply
+*.avi
+*.mp4
+
+# Local screenshots currently stored beside the source files
+/1.png
+/2.png
+/3.png
+/4.png
+/Screenshot 2026-10-26 154545.png
+/Screenshot 2026-10-26 154625.png
+/Screenshot 2026-10-26 154825.png
